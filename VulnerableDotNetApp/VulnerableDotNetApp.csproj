@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Intentionally vulnerable packages -->
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" /> <!-- CVE-2021-24112 -->
+    <PackageReference Include="log4net" Version="2.0.8" /> <!-- CVE-2018-1285 -->
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.6.0" /> <!-- CVE-2022-29117 -->
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" /> <!-- CVE-2019-0982 -->
+    <PackageReference Include="Dapper" Version="1.60.6" /> <!-- SQLi if used unsafely -->
+  </ItemGroup>
+</Project>

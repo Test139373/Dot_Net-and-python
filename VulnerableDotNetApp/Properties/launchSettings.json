@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "VulnerableDotNetApp": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "swagger",  // VULNERABLE: Exposes API docs
+      "applicationUrl": "http://0.0.0.0:5000",  // UNSAFE: Binds to all interfaces
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"  // VULNERABLE: Debug mode
+      }
+    }
+  }
+}
