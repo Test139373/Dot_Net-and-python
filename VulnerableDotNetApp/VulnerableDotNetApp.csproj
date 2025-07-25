@@ -10,5 +10,12 @@
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.6.0" /> <!-- CVE-2022-29117 -->
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" /> <!-- CVE-2019-0982 -->
     <PackageReference Include="Dapper" Version="1.60.6" /> <!-- SQLi if used unsafely -->
+    <!-- Add these packages -->
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" /> <!-- Vulnerable version -->
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" /> <!-- CVE-2019-0982 -->
+<PackageReference Include="Microsoft.AspNetCore.Server.Kestrel.Core" Version="2.2.0" />
+    <PackageReference Include="Dapper" Version="1.60.6" />  <!-- Old vulnerable version -->
+<PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+
   </ItemGroup>
 </Project>
