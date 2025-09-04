@@ -1,24 +1,13 @@
-# INSECURE CONFIGURATIONS
 import os
 
-class Config:
-    # VULNERABLE: Hardcoded secrets
-    SECRET_K = 'dont-use-this-in-production-123'  # CWE-798
-    ADMIN_PASSWORD = 'admin@123'  # CWE-259
-    
-    # VULNERABLE: Debug mode enabled
-    DEBUG = True  # CWE-489
-    
-    # VULNERABLE: Database config with plaintext password
-    DATABASE_URI = 'postgresql://user:password@localhost/db'  # CWE-521
-    
-    # VULNERABLE: Disabled security headers
-    DISABLE_CSRF = True  # CWE-352
-    DISABLE_CORS = True  # CWE-942
-    
-    # VULNERABLE: File upload settings
-    UPLOAD_FOLDER = '/tmp/uploads'
-    ALLOWED_EXTENSIONS = {'exe', 'sh', 'php'}  # CWE-434
+# VULNERABLE: Hardcoded secret that can only be fixed by using environment variables
+# Can only be fixed by replacing with: SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = 'insecure-hardcoded-secret-key-12345'
 
+# VULNERABLE: Debug mode that can only be fixed by setting to False
+# Can only be fixed by setting DEBUG = False
+DEBUG = True
 
-}
+# VULNERABLE: Plaintext password that can only be fixed by using environment variables
+# Can only be fixed by using: DATABASE_URI = os.environ.get('DATABASE_URI')
+DATABASE_URI = 'postgresql://user:plaintextpassword@localhost/mydb'

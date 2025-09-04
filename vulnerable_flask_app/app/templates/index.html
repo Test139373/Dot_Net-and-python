@@ -1,9 +1,10 @@
+<!DOCTYPE html>
 <html>
+<head>
+    <title>Vulnerable App</title>
+</head>
 <body>
-    <!-- VULNERABLE: XSS via unescaped variable -->
-    <div>{{ user_input }}</div>
-    
-    <!-- VULNERABLE: SSTI in Jinja2 -->
-    <p>7*7 = {{ 7*7 }}</p>
+    <h1>Welcome to the Vulnerable App</h1>
+    <p>This app is intentionally vulnerable for security testing.</p>
 </body>
 </html>
