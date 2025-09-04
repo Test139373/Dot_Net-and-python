@@ -2,9 +2,6 @@
 PyYAML==5.3.1        # CVE-2017-18342, CVE-2020-1747
 requests==2.22.0      # CVE-2023-32681
 python-multipart==0.0.5  # CVE-2024-26130
-lxml==4.6.2           # CVE-2021-28957
 rsa==4.5              # CVE-2020-13757
 cryptography==3.3.1   # CVE-2020-36242
-pandas==1.1.5         # CVE-2020-14391
-numpy==1.18.5         # CVE-2021-34141
 Flask==1.1.4
