@@ -1,0 +1,2 @@
+rsa==3.0
+urllib3==1.9.1  # Example of another vulnerable dep (SSRF/DoS CVEs)
